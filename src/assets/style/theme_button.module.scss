@@ -1,0 +1,30 @@
+html[data-theme='light'] {
+  --toggle-color: OrangeRed;
+}
+
+html[data-theme='dark'] {
+  --toggle-color: Orange;
+}
+
+.theme_toggle {
+  width: 4rem;
+  height: 4rem;
+  //
+  padding: 0;
+  //
+  border: none;
+  border-radius: 50%;
+  //
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  //
+  color: var(--toggle-color);
+  background-color: var(--dropdown-bg);
+  //
+  font-size: 2rem;
+  //
+  cursor: pointer;
+  //
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}

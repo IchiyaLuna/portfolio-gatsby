@@ -1,0 +1,43 @@
+html[data-theme='light'] {
+  --marker-bg: rgba(1, 2, 3, 40%);
+}
+
+html[data-theme='dark'] {
+  --marker-bg: rgba(255, 253, 253, 57%);
+}
+
+.wrapper {
+  position: relative;
+}
+
+.marker {
+  width: 0.75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.marker::before {
+  content: '';
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: var(--marker-bg);
+}
+
+.marker::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  left: 0.25rem;
+  bottom: 0;
+  width: 0.25rem;
+  border-radius: 0.125rem;
+  background-color: var(--marker-bg);
+}
+
+.content {
+  padding-left: 1.5rem;
+}

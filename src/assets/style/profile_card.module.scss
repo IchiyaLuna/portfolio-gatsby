@@ -1,0 +1,87 @@
+@import './mixins';
+
+.card {
+  grid-column: span 2;
+  grid-row: span 1;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--section-bg);
+  overflow: hidden;
+}
+
+@include mobile {
+  .card {
+    grid-column: span 3;
+  }
+}
+
+.background {
+  width: 100%;
+  aspect-ratio: 6 / 1;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--section-bg);
+}
+
+.body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  // size
+  width: 25%;
+  min-width: 4rem;
+  aspect-ratio: 1 / 1;
+  //
+  margin-top: calc(-1rem - 12.5%);
+  margin-bottom: 1rem;
+  // border
+  border-radius: 50%;
+  // display
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // position
+  position: relative;
+  // colors
+  background-color: var(--background-color);
+
+  img {
+    width: calc(100% - 0.5rem);
+    aspect-ratio: 1 / 1;
+    // border
+    border-radius: 50%;
+  }
+}
+
+.socials {
+  a:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
+
+  i {
+    font-size: 1.25rem;
+    color: var(--color);
+  }
+}
+
+.profile {
+  p {
+    white-space: nowrap;
+  }
+
+  p:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+
+  i {
+    margin-right: 0.5rem;
+  }
+}

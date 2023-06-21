@@ -1,0 +1,30 @@
+@import './mixins';
+
+.card {
+  min-width: fit-content;
+  padding: 1rem;
+  grid-column: span 1;
+  grid-row: span 1;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--section-bg);
+
+  p {
+    white-space: nowrap;
+  }
+
+  p:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+@include mobile {
+  .card {
+    grid-column: span 3;
+  }
+}

@@ -1,0 +1,82 @@
+@import './colors';
+@import './mixins';
+@import './variables';
+
+html[data-theme='dark'] {
+  --color: #{$dark-color};
+  --color-inactive: #{$dark-color-inactive};
+  --background-color: #{$dark-background-color};
+  --section-bg: #{$dark-section-bg};
+  --border-color: #{$dark-border-color};
+  --dropdown-bg: #{$dark-dropdown-bg};
+  --menu-hover-bg: #{$dark-menu-hover-bg};
+  --scrollbar-bg: #{$dark-scrollbar-bg};
+}
+
+html[data-theme='light'] {
+  --color: #{$light-color};
+  --color-inactive: #{$light-color-inactive};
+  --background-color: #{$light-background-color};
+  --section-bg: #{$light-section-bg};
+  --border-color: #{$light-border-color};
+  --dropdown-bg: #{$light-dropdown-bg};
+  --menu-hover-bg: #{$light-menu-hover-bg};
+  --scrollbar-bg: #{$light-scrollbar-bg};
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  //
+  padding: 2rem;
+  //
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  //
+  position: absolute;
+  //
+  background: url('../../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.window {
+  width: 100%;
+  height: 100%;
+  max-width: 1250px;
+  max-height: 860px;
+  //
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  background-color: var(--background-color);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-size: 15px;
+  font-weight: 400;
+  //
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.body {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.content {
+  padding: $content-padding;
+  flex-grow: 1;
+  color: var(--color);
+  background-color: var(--background-color);
+  overflow: auto;
+}

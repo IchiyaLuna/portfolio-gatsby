@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Home",
+    "links": [
+      {
+        "icon": "fa-solid fa-address-card fa-fw",
+        "name": "Profile",
+        "to": "/"
+      },
+      {
+        "icon": "fa-brands fa-github fa-fw",
+        "name": "GitHub",
+        "to": "https://github.com/IchiyaLuna"
+      }
+    ]
+  },
+  {
+    "title": "Study",
+    "links": [
+      {
+        "icon": "fa-solid fa-c fa-fw",
+        "name": "C/C++",
+        "to": "/study/c_cpp"
+      },
+      {
+        "icon": "fa-brands fa-rust fa-fw",
+        "name": "Rust",
+        "to": "/study/rust"
+      },
+      {
+        "icon": "fa-brands fa-square-js fa-fw",
+        "name": "Javascript",
+        "to": "/study/javascript"
+      },
+      {
+        "icon": "fa-brands fa-react fa-fw",
+        "name": "React",
+        "to": "/study/react"
+      },
+      {
+        "icon": "fa-solid fa-database fa-fw",
+        "name": "SQL",
+        "to": "/study/sql"
+      }
+    ]
+  },
+  {
+    "title": "App",
+    "links": [
+      {
+        "icon": "fa-duotone fa-messages fa-fw",
+        "name": "Message",
+        "to": "/message"
+      }
+    ]
+  }
+]

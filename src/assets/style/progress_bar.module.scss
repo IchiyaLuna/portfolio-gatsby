@@ -1,0 +1,39 @@
+html[data-theme='dark'] {
+  --progress-bg: rgba(255, 255, 255, 25%);
+  --progress-color: rgba(255, 253, 253, 57%);
+}
+
+html[data-theme='light'] {
+  --progress-bg: rgba(113, 119, 114, 25%);
+  --progress-color: rgba(1, 2, 3, 40%);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  p {
+    width: 7rem;
+    margin-right: 0.5rem;
+    text-align: right;
+  }
+}
+
+.wrapper:not(:last-of-type) {
+  margin-bottom: 0.25rem;
+}
+
+.background {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--progress-bg);
+}
+
+.bar {
+  width: 0;
+  height: 100%;
+  border-radius: 0.25rem;
+  background-color: var(--progress-color);
+  transition: width 1s ease-out;
+}
